@@ -1,165 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-04T00:27:38Z" name="Smoke Suite" finished-at="2023-06-04T00:37:27Z" duration-ms="589522">
+  <suite started-at="2023-06-20T08:23:05Z" name="Default suite" finished-at="2023-06-20T08:24:25Z" duration-ms="80085">
     <groups>
     </groups>
-    <test started-at="2023-06-04T00:27:38Z" name="Smoke Test" finished-at="2023-06-04T00:37:27Z" duration-ms="589522">
-      <class name="timesheet.My_Time_Sheet_TestNG">
-        <test-method signature="ValidationApp()[pri:0, instance:timesheet.My_Time_Sheet_TestNG@1018bde2]" started-at="2023-06-04T00:36:04Z" name="ValidationApp" finished-at="2023-06-04T00:36:42Z" duration-ms="38041" status="PASS">
+    <test started-at="2023-06-20T08:23:05Z" name="Default test" finished-at="2023-06-20T08:24:25Z" duration-ms="80085">
+      <class name="timesheet.Employee_Time_Sheet">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:timesheet.Employee_Time_Sheet@54eb2b70]" started-at="2023-06-20T08:23:05Z" name="launchApp" finished-at="2023-06-20T08:23:16Z" duration-ms="10672" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- timesheet.My_Time_Sheet_TestNG -->
-      <class name="projectinfo.Projects_TestNG">
-        <test-method signature="ValidationApp()[pri:0, instance:projectinfo.Projects_TestNG@740773a3]" started-at="2023-06-04T00:32:34Z" name="ValidationApp" finished-at="2023-06-04T00:33:09Z" duration-ms="35040" status="PASS">
+        </test-method> <!-- launchApp -->
+        <test-method signature="validationApp()[pri:0, instance:timesheet.Employee_Time_Sheet@54eb2b70]" started-at="2023-06-20T08:23:16Z" name="validationApp" finished-at="2023-06-20T08:24:25Z" duration-ms="69136" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- projectinfo.Projects_TestNG -->
-      <class name="reports.Project_Reports_Testng">
-        <test-method signature="ValidationApp()[pri:0, instance:reports.Project_Reports_Testng@484970b0]" started-at="2023-06-04T00:29:40Z" name="ValidationApp" finished-at="2023-06-04T00:30:33Z" duration-ms="52953" status="PASS">
+        </test-method> <!-- validationApp -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:timesheet.Employee_Time_Sheet@54eb2b70]" started-at="2023-06-20T08:24:25Z" name="closeApp" finished-at="2023-06-20T08:24:25Z" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- reports.Project_Reports_Testng -->
-      <class name="projectinfo.Coustmers_TestNG">
-        <test-method signature="ValidationApp()[pri:0, instance:projectinfo.Coustmers_TestNG@7748410a]" started-at="2023-06-04T00:31:57Z" name="ValidationApp" finished-at="2023-06-04T00:32:34Z" duration-ms="37118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- projectinfo.Coustmers_TestNG -->
-      <class name="attendance.Punch_In_Out_TestNG">
-        <test-method signature="ValidationApp()[pri:0, instance:attendance.Punch_In_Out_TestNG@65b3f4a4]" started-at="2023-06-04T00:36:42Z" name="ValidationApp" finished-at="2023-06-04T00:37:24Z" duration-ms="41896" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- attendance.Punch_In_Out_TestNG -->
-      <class name="attendance.My_Records_TestNG">
-        <test-method signature="ValidationApp()[pri:0, instance:attendance.My_Records_TestNG@37f1104d]" started-at="2023-06-04T00:33:09Z" name="ValidationApp" finished-at="2023-06-04T00:33:39Z" duration-ms="29424" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- attendance.My_Records_TestNG -->
-      <class name="attendance.Configuration_TestNg">
-        <test-method signature="ValidationApp()[pri:0, instance:attendance.Configuration_TestNg@60015ef5]" started-at="2023-06-04T00:34:22Z" name="ValidationApp" finished-at="2023-06-04T00:34:58Z" duration-ms="35746" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- attendance.Configuration_TestNg -->
-      <class name="reports.Employee_Reports_TestNG">
-        <test-method signature="ValidationApp()[pri:0, instance:reports.Employee_Reports_TestNG@4470f8a6]" started-at="2023-06-04T00:30:33Z" name="ValidationApp" finished-at="2023-06-04T00:31:18Z" duration-ms="45533" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- reports.Employee_Reports_TestNG -->
-      <class name="timesheet.Employee_Time_Sheet_TestNg">
-        <test-method signature="ValidationApp()[pri:0, instance:timesheet.Employee_Time_Sheet_TestNg@2f54a33d]" started-at="2023-06-04T00:34:58Z" name="ValidationApp" finished-at="2023-06-04T00:36:04Z" duration-ms="65677" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- timesheet.Employee_Time_Sheet_TestNg -->
-      <class name="reports.Attendance_Summary_TestNG">
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:reports.Attendance_Summary_TestNG@7c83dc97]" started-at="2023-06-04T00:27:38Z" name="LaunchApp" finished-at="2023-06-04T00:27:48Z" duration-ms="10091" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:attendance.Configuration_TestNg@60015ef5]" started-at="2023-06-04T00:27:48Z" name="LaunchApp" finished-at="2023-06-04T00:27:57Z" duration-ms="9134" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:projectinfo.Coustmers_TestNG@7748410a]" started-at="2023-06-04T00:27:57Z" name="LaunchApp" finished-at="2023-06-04T00:28:07Z" duration-ms="9915" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:attendance.Employee_Record_TestNG@55740540]" started-at="2023-06-04T00:28:07Z" name="LaunchApp" finished-at="2023-06-04T00:28:19Z" duration-ms="11511" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:reports.Employee_Reports_TestNG@4470f8a6]" started-at="2023-06-04T00:28:19Z" name="LaunchApp" finished-at="2023-06-04T00:28:28Z" duration-ms="9602" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:timesheet.Employee_Time_Sheet_TestNg@2f54a33d]" started-at="2023-06-04T00:28:28Z" name="LaunchApp" finished-at="2023-06-04T00:28:39Z" duration-ms="11096" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:attendance.My_Records_TestNG@37f1104d]" started-at="2023-06-04T00:28:39Z" name="LaunchApp" finished-at="2023-06-04T00:28:52Z" duration-ms="12221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:timesheet.My_Time_Sheet_TestNG@1018bde2]" started-at="2023-06-04T00:28:52Z" name="LaunchApp" finished-at="2023-06-04T00:29:02Z" duration-ms="10628" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:reports.Project_Reports_Testng@484970b0]" started-at="2023-06-04T00:29:02Z" name="LaunchApp" finished-at="2023-06-04T00:29:12Z" duration-ms="10346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:projectinfo.Projects_TestNG@740773a3]" started-at="2023-06-04T00:29:12Z" name="LaunchApp" finished-at="2023-06-04T00:29:24Z" duration-ms="11946" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method is-config="true" signature="LaunchApp()[pri:0, instance:attendance.Punch_In_Out_TestNG@65b3f4a4]" started-at="2023-06-04T00:29:24Z" name="LaunchApp" finished-at="2023-06-04T00:29:40Z" duration-ms="15417" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApp -->
-        <test-method signature="ValidationApp()[pri:0, instance:reports.Attendance_Summary_TestNG@7c83dc97]" started-at="2023-06-04T00:31:18Z" name="ValidationApp" finished-at="2023-06-04T00:31:57Z" duration-ms="38716" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:reports.Attendance_Summary_TestNG@7c83dc97]" started-at="2023-06-04T00:37:24Z" name="CloseApp" finished-at="2023-06-04T00:37:24Z" duration-ms="225" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:attendance.Configuration_TestNg@60015ef5]" started-at="2023-06-04T00:37:24Z" name="CloseApp" finished-at="2023-06-04T00:37:24Z" duration-ms="401" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:projectinfo.Coustmers_TestNG@7748410a]" started-at="2023-06-04T00:37:24Z" name="CloseApp" finished-at="2023-06-04T00:37:25Z" duration-ms="304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:attendance.Employee_Record_TestNG@55740540]" started-at="2023-06-04T00:37:25Z" name="CloseApp" finished-at="2023-06-04T00:37:25Z" duration-ms="254" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:reports.Employee_Reports_TestNG@4470f8a6]" started-at="2023-06-04T00:37:25Z" name="CloseApp" finished-at="2023-06-04T00:37:26Z" duration-ms="804" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:timesheet.Employee_Time_Sheet_TestNg@2f54a33d]" started-at="2023-06-04T00:37:26Z" name="CloseApp" finished-at="2023-06-04T00:37:26Z" duration-ms="275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:attendance.My_Records_TestNG@37f1104d]" started-at="2023-06-04T00:37:26Z" name="CloseApp" finished-at="2023-06-04T00:37:26Z" duration-ms="257" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:timesheet.My_Time_Sheet_TestNG@1018bde2]" started-at="2023-06-04T00:37:26Z" name="CloseApp" finished-at="2023-06-04T00:37:26Z" duration-ms="396" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:reports.Project_Reports_Testng@484970b0]" started-at="2023-06-04T00:37:26Z" name="CloseApp" finished-at="2023-06-04T00:37:27Z" duration-ms="233" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:projectinfo.Projects_TestNG@740773a3]" started-at="2023-06-04T00:37:27Z" name="CloseApp" finished-at="2023-06-04T00:37:27Z" duration-ms="371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-        <test-method is-config="true" signature="CloseApp()[pri:0, instance:attendance.Punch_In_Out_TestNG@65b3f4a4]" started-at="2023-06-04T00:37:27Z" name="CloseApp" finished-at="2023-06-04T00:37:27Z" duration-ms="354" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseApp -->
-      </class> <!-- reports.Attendance_Summary_TestNG -->
-      <class name="attendance.Employee_Record_TestNG">
-        <test-method signature="ValidationApp()[pri:0, instance:attendance.Employee_Record_TestNG@55740540]" started-at="2023-06-04T00:33:39Z" name="ValidationApp" finished-at="2023-06-04T00:34:22Z" duration-ms="43508" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidationApp -->
-      </class> <!-- attendance.Employee_Record_TestNG -->
-    </test> <!-- Smoke Test -->
-  </suite> <!-- Smoke Suite -->
+        </test-method> <!-- closeApp -->
+      </class> <!-- timesheet.Employee_Time_Sheet -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

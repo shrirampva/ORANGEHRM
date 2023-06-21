@@ -3,83 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectinfo.Projects_TestNG">
-        <methods>
-          <include name="ValidationApp"/>
-          <include name="LaunchApp"/>
-          <include name="CloseApp"/>
-        </methods>
-      </class> <!-- projectinfo.Projects_TestNG -->
-      <class name="attendance.Punch_In_Out_TestNG">
-        <methods>
-          <include name="CloseApp"/>
-          <include name="ValidationApp"/>
-          <include name="LaunchApp"/>
-        </methods>
-      </class> <!-- attendance.Punch_In_Out_TestNG -->
-      <class name="reports.Attendance_Summary_TestNG">
+      <class name="timesheet.My_Time_Sheet">
         <methods>
           <include name="LaunchApp"/>
           <include name="ValidationApp"/>
           <include name="CloseApp"/>
         </methods>
-      </class> <!-- reports.Attendance_Summary_TestNG -->
-      <class name="timesheet.Employee_Time_Sheet_TestNg">
-        <methods>
-          <include name="LaunchApp"/>
-          <include name="ValidationApp"/>
-          <include name="CloseApp"/>
-        </methods>
-      </class> <!-- timesheet.Employee_Time_Sheet_TestNg -->
-      <class name="timesheet.My_Time_Sheet_TestNG">
-        <methods>
-          <include name="ValidationApp"/>
-          <include name="CloseApp"/>
-          <include name="LaunchApp"/>
-        </methods>
-      </class> <!-- timesheet.My_Time_Sheet_TestNG -->
-      <class name="attendance.Employee_Record_TestNG">
-        <methods>
-          <include name="LaunchApp"/>
-          <include name="CloseApp"/>
-          <include name="ValidationApp"/>
-        </methods>
-      </class> <!-- attendance.Employee_Record_TestNG -->
-      <class name="attendance.My_Records_TestNG">
-        <methods>
-          <include name="CloseApp"/>
-          <include name="LaunchApp"/>
-          <include name="ValidationApp"/>
-        </methods>
-      </class> <!-- attendance.My_Records_TestNG -->
-      <class name="reports.Project_Reports_Testng">
-        <methods>
-          <include name="CloseApp"/>
-          <include name="ValidationApp"/>
-          <include name="LaunchApp"/>
-        </methods>
-      </class> <!-- reports.Project_Reports_Testng -->
-      <class name="attendance.Configuration_TestNg">
-        <methods>
-          <include name="ValidationApp"/>
-          <include name="LaunchApp"/>
-          <include name="CloseApp"/>
-        </methods>
-      </class> <!-- attendance.Configuration_TestNg -->
-      <class name="projectinfo.Coustmers_TestNG">
-        <methods>
-          <include name="ValidationApp"/>
-          <include name="LaunchApp"/>
-          <include name="CloseApp"/>
-        </methods>
-      </class> <!-- projectinfo.Coustmers_TestNG -->
-      <class name="reports.Employee_Reports_TestNG">
-        <methods>
-          <include name="LaunchApp"/>
-          <include name="ValidationApp"/>
-          <include name="CloseApp"/>
-        </methods>
-      </class> <!-- reports.Employee_Reports_TestNG -->
+      </class> <!-- timesheet.My_Time_Sheet -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
