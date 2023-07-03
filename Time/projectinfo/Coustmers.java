@@ -2,7 +2,6 @@ package projectinfo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -14,10 +13,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.google.common.io.Files;
+import bussiop.Pom;
 public class Coustmers {
 	public static WebDriver driver;
 	public Workbook wb; 
@@ -39,9 +40,10 @@ public class Coustmers {
 		FileInputStream f = new FileInputStream("D:\\ECLIPS\\ORANGE_HRM(TIME)\\testfolder\\ORANGEHRM.xls");									
 		Workbook wb = Workbook.getWorkbook(f);
 		Sheet s = wb.getSheet("Sheet1");			
-		driver.findElement(By.name(s.getCell(1, 2).getContents())).sendKeys(s.getCell(1, 5).getContents());											
-		driver.findElement(By.name(s.getCell(1, 3).getContents())).sendKeys(s.getCell(1, 6).getContents());											
-		driver.findElement(By.name(s.getCell(1, 4).getContents())).click();
+		Pom p =PageFactory.initElements(driver,Pom.class);
+		p.uid.sendKeys(s.getCell(1, 5).getContents());
+		p.password.sendKeys(s.getCell(1, 6).getContents());
+		p.sub.click();
 		FileInputStream f1 = new FileInputStream("D:\\ECLIPS\\ORANGE_HRM(TIME)\\testfolder\\ProjectInfo.xls");	
 		try (HSSFWorkbook wb1 = new HSSFWorkbook(f1)) {
 			HSSFSheet s1 = wb1.getSheet("Sheet1");				
