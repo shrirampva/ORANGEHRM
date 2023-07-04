@@ -2,6 +2,8 @@ package timesheet;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -53,11 +55,11 @@ public class My_Time_Sheet {
 		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 		Actions act=new Actions(driver);	
 		act.moveToElement(time).perform();	
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement timeSheets = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));
 		Actions act1=new Actions(driver); 	
 		act1.moveToElement(timeSheets).click().perform();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement mytimeSheets = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 		act1.moveToElement(mytimeSheets).click().perform();	
 		String value = "1";
@@ -65,7 +67,6 @@ public class My_Time_Sheet {
 		for (WebElement elements : alldates)
 		{
 			String dt=elements.getText();
-			
 		    if (dt.equals(value))
 		    {
 		        elements.click(); 
@@ -74,16 +75,16 @@ public class My_Time_Sheet {
 		 		}
 		WebElement edit = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));	
 		edit.click();	
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement row = driver.findElement(By.xpath(s1.getRow(6).getCell(1).getStringCellValue()));	
 		row.clear();	
 		row.sendKeys("MARY - S");
 		row.sendKeys(Keys.ARROW_DOWN);			
 		row.sendKeys(Keys.ENTER);			
-		Thread.sleep(4000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Select drpActivicty = new Select(driver.findElement(By.name(s1.getRow(7).getCell(1).getStringCellValue())));													
         drpActivicty.selectByVisibleText("ENG");
-		Thread.sleep(1000);	
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(s1.getRow(8).getCell(1).getStringCellValue())).sendKeys("08:00");
 		driver.findElement(By.xpath(s1.getRow(10).getCell(1).getStringCellValue())).clear();
 		driver.findElement(By.xpath(s1.getRow(11).getCell(1).getStringCellValue())).sendKeys("09:00");
@@ -106,11 +107,11 @@ public class My_Time_Sheet {
 		driver.findElement(By.xpath(s1.getRow(40).getCell(1).getStringCellValue())).clear();
 		driver.findElement(By.xpath(s1.getRow(41).getCell(1).getStringCellValue())).sendKeys("09:00");
 		driver.findElement(By.xpath(s1.getRow(43).getCell(1).getStringCellValue())).click();
-		Thread.sleep(1000);		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		WebElement newstatus = driver.findElement(By.xpath(s1.getRow(44).getCell(1).getStringCellValue()));	
 		System.out.println(newstatus.getText());
 		}
-		Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	

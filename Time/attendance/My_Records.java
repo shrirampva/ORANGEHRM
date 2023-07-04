@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 
@@ -54,22 +56,25 @@ public class My_Records {
 			HSSFSheet s1 = wb1.getSheet("Sheet3");
 			WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 			Actions act=new Actions(driver);
-			Thread.sleep(3000);	
 			act.moveToElement(time).perform();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement attendance = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 			Actions act1=new Actions(driver); 
 			act1.moveToElement(attendance).click().perform();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement myrecords = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 			act1.moveToElement(myrecords).click().perform();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement attendancedate = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));
 			attendancedate.click();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement month = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));	
 			Select sel=new Select(month);	
 			sel.selectByValue("4");	
 			WebElement year = driver.findElement(By.xpath(s1.getRow(6).getCell(1).getStringCellValue()));	
 			Select sel1=new Select(year);	
 			sel1.selectByValue("2023");
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 			String searchdate = "25";
 			List<WebElement> alldates = driver.findElements(By.xpath(s1.getRow(7).getCell(1).getStringCellValue()));
 			for (WebElement elements : alldates)
@@ -83,7 +88,7 @@ public class My_Records {
 			    }
 			 		}
 		}
-		Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	

@@ -1,6 +1,8 @@
 package attendance;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;				
@@ -50,18 +52,18 @@ public class Configuration {
 			WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));
 			Actions act=new Actions(driver);	
 			act.moveToElement(time).perform();
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement attendance = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));
 			Actions act1=new Actions(driver); 	
 			act1.moveToElement(attendance).click().perform();
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 			WebElement config = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 			act1.moveToElement(config).click().perform();
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement save = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));
 			save.click();
 		}
-			Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 			catch (Exception e) {
 		File f12 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);											

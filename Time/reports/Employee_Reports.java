@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -53,17 +54,17 @@ public class Employee_Reports {
 		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 		Actions act=new Actions(driver);	
 		act.moveToElement(time).perform();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement reports = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 		Actions act1=new Actions(driver); 	
 		act1.moveToElement(reports).click().perform();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		WebElement empreports = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 		act1.moveToElement(empreports).click().perform();
 		WebElement employee = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));	
 		employee.sendKeys("Stephen Robert");	
 		employee.sendKeys(Keys.ENTER);
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement pro = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));	
 		Select sel=new Select(pro);	
 		sel.selectByValue("1");
@@ -92,7 +93,7 @@ public class Employee_Reports {
 		 		}
 	    WebElement projectdaterange1 = driver.findElement(By.xpath(s1.getRow(11).getCell(1).getStringCellValue()));	
 		projectdaterange1.click();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement month1 = driver.findElement(By.xpath(s1.getRow(12).getCell(1).getStringCellValue()));	
 		Select sel4=new Select(month1);	
 		sel4.selectByValue("6");
@@ -111,13 +112,13 @@ public class Employee_Reports {
 		        break;
 		    }
 		 		}
-	    Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    WebElement check = driver.findElement(By.xpath(s1.getRow(15).getCell(1).getStringCellValue()));	
 	    check.click();
 	    WebElement view = driver.findElement(By.xpath(s1.getRow(16).getCell(1).getStringCellValue()));	
 	    view.click();
 		}
-	    Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	

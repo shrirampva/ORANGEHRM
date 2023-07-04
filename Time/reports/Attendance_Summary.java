@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -53,15 +55,18 @@ public class Attendance_Summary {
 		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 		Actions act=new Actions(driver);	
 		act.moveToElement(time).perform();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement reports = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 		Actions act1=new Actions(driver); 	
 		act1.moveToElement(reports).click().perform();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement AtdSumreports = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 		act1.moveToElement(AtdSumreports).click().perform();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement employee = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));	
 		employee.sendKeys("Stephen Robert");	
 		employee.sendKeys(Keys.ENTER);
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement jobtlt = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));	
 		Select sel=new Select(jobtlt);	
 		sel.selectByValue("1");
@@ -73,6 +78,7 @@ public class Attendance_Summary {
 		sel2.selectByValue("1");
 		WebElement projectdaterange = driver.findElement(By.xpath(s1.getRow(8).getCell(1).getStringCellValue()));	
 		projectdaterange.click();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement month = driver.findElement(By.xpath(s1.getRow(9).getCell(1).getStringCellValue()));	
 		Select sel3=new Select(month);	
 		sel3.selectByValue("2");
@@ -91,13 +97,13 @@ public class Attendance_Summary {
 		        break;
 		    }
 		 		}
-	    Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    WebElement projectdaterange1 = driver.findElement(By.xpath(s1.getRow(12).getCell(1).getStringCellValue()));	
 		projectdaterange1.click();
 		WebElement month1 = driver.findElement(By.xpath(s1.getRow(13).getCell(1).getStringCellValue()));	
 		Select sel5=new Select(month1);	
 		sel5.selectByValue("6");
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		WebElement year1 = driver.findElement(By.xpath(s1.getRow(14).getCell(1).getStringCellValue()));	
 		Select sel6=new Select(year1);	
 		sel6.selectByValue("2023");
@@ -117,7 +123,7 @@ public class Attendance_Summary {
 	    WebElement view = driver.findElement(By.xpath(s1.getRow(16).getCell(1).getStringCellValue()));	
 	    view.click();
 		}
-	    Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	

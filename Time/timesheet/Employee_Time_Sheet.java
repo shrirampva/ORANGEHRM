@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -53,19 +55,19 @@ public class Employee_Time_Sheet {
 		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 		Actions act=new Actions(driver);	
 		act.moveToElement(time).perform();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement timeSheets = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 		Actions act1=new Actions(driver); 	
 		act1.moveToElement(timeSheets).click().perform();
 		WebElement employeetimeSheets = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 		act1.moveToElement(employeetimeSheets).click().perform();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue())).sendKeys("Stephen Robert");	
 		driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue())).clear();
 		driver.findElement(By.xpath(s1.getRow(6).getCell(1).getStringCellValue())).sendKeys("Stephen Robert");
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(s1.getRow(7).getCell(1).getStringCellValue())).click();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String value = "0";
 		List<WebElement> alldates = driver.findElements(By.xpath(s1.getRow(8).getCell(1).getStringCellValue()));
 		for (WebElement elements : alldates)
@@ -85,16 +87,16 @@ public class Employee_Time_Sheet {
 			edit.click();	
 		    break;
 		}	
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 		WebElement row = driver.findElement(By.xpath(s1.getRow(11).getCell(1).getStringCellValue()));	
 		row.clear();	
 		row.sendKeys("MARY - S");
 		row.sendKeys(Keys.ARROW_DOWN);			
 		row.sendKeys(Keys.ENTER);			
-		Thread.sleep(4000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Select drpActivicty = new Select(driver.findElement(By.name(s1.getRow(12).getCell(1).getStringCellValue())));													
         drpActivicty.selectByVisibleText("ENG");
-		Thread.sleep(1000);	
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(s1.getRow(13).getCell(1).getStringCellValue())).sendKeys("8:00");
 		driver.findElement(By.xpath(s1.getRow(14).getCell(1).getStringCellValue())).clear();
 		driver.findElement(By.xpath(s1.getRow(15).getCell(1).getStringCellValue())).sendKeys("9:00");
@@ -116,13 +118,13 @@ public class Employee_Time_Sheet {
 		driver.findElement(By.xpath(s1.getRow(31).getCell(1).getStringCellValue())).sendKeys("0:00");	
 		driver.findElement(By.xpath(s1.getRow(32).getCell(1).getStringCellValue())).clear();
 		driver.findElement(By.xpath(s1.getRow(33).getCell(1).getStringCellValue())).sendKeys("9:00");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(s1.getRow(34).getCell(1).getStringCellValue())).click();	
-		Thread.sleep(1000);	
 		driver.findElement(By.xpath(s1.getRow(35).getCell(1).getStringCellValue())).click();
 		driver.findElement(By.xpath(s1.getRow(36).getCell(1).getStringCellValue())).click();
 		driver.findElement(By.xpath(s1.getRow(37).getCell(1).getStringCellValue())).click();
 		}
-		Thread.sleep(10000);	
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);	
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
@@ -131,7 +133,7 @@ public class Employee_Time_Sheet {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 }
-	}
-	}
+}
+}
 }
 		

@@ -31,8 +31,6 @@
 	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/lib/SparseBitSet-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/jxl-2.6.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/selenium-edge-driver-4.9.0-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/selenium-server-3.141.59.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/selenium-server-4.8.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/testng-6.14.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Sree Harish/Downloads/jar_files/bcpkix-jdk15on-1.64.jar"/>

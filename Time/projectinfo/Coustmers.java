@@ -2,6 +2,8 @@ package projectinfo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -50,26 +52,27 @@ public class Coustmers {
 		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 		Actions act=new Actions(driver);	
 		act.moveToElement(time).perform();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement infoproj = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 		Actions act1=new Actions(driver); 	
 		act1.moveToElement(infoproj).click().perform();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement coustmers = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 		act1.moveToElement(coustmers).click().perform();
 		WebElement add = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));	
 		add.click();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement name = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));	
 		name.clear();	
 		name.sendKeys("Michel");
 		WebElement description = driver.findElement(By.xpath(s1.getRow(6).getCell(1).getStringCellValue()));	
 		description.clear();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		description.sendKeys("Welcome");
 		WebElement save = driver.findElement(By.xpath(s1.getRow(7).getCell(1).getStringCellValue()));	
 		save.click();
 		}
-		Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	

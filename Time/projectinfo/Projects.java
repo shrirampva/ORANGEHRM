@@ -2,6 +2,8 @@ package projectinfo;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -50,7 +52,7 @@ public class Projects {
 		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 		Actions act=new Actions(driver);	
 		act.moveToElement(time).perform();
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		WebElement infoproj = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 		Actions act1=new Actions(driver); 	
 		act1.moveToElement(infoproj).click().perform();
@@ -58,19 +60,19 @@ public class Projects {
 		act1.moveToElement(proj).click().perform();
 		WebElement name = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));	
 		name.clear();	
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		name.sendKeys("MARY");
 		WebElement pro = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));	
 		pro.clear();	
 		pro.sendKeys("S");
 		WebElement proadmin = driver.findElement(By.xpath(s1.getRow(6).getCell(1).getStringCellValue()));	
 		proadmin.clear();	
-		Thread.sleep(3000);	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		proadmin.sendKeys("Jon Philip");
 		WebElement add = driver.findElement(By.xpath(s1.getRow(7).getCell(1).getStringCellValue()));	
 		add.click();	
 		}
-		Thread.sleep(10000);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
@@ -79,6 +81,6 @@ public class Projects {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 }
-		}	
-	}
+}	
+}
 }

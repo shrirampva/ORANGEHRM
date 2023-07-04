@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -52,26 +54,28 @@ public class Employee_Record {
 			HSSFSheet s1 = wb1.getSheet("Sheet2");
 			WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
 			Actions act=new Actions(driver);	
-			Thread.sleep(3000);	
 			act.moveToElement(time).perform();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement attendance = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 			Actions act1=new Actions(driver); 	
 			act1.moveToElement(attendance).click().perform();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement myrecords = driver.findElement(By.xpath(s1.getRow(3).getCell(1).getStringCellValue()));	
 			act1.moveToElement(myrecords).click().perform();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement emp = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));
 			emp	.sendKeys("Stephen Robert");	
 			emp.sendKeys(Keys.ENTER);
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement attendancedate = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));
 			attendancedate.click();
-			Thread.sleep(3000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement month = driver.findElement(By.xpath(s1.getRow(6).getCell(1).getStringCellValue()));	
 			Select sel=new Select(month);	
 			sel.selectByValue("5");	
 			WebElement year = driver.findElement(By.xpath(s1.getRow(7).getCell(1).getStringCellValue()));	
 			Select sel1=new Select(year);	
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			sel1.selectByValue("2023");
 			String date = "1";
 			List<WebElement> alldates = driver.findElements(By.xpath(s1.getRow(8).getCell(1).getStringCellValue()));
@@ -93,17 +97,17 @@ public class Employee_Record {
 			in.click();
 			WebElement attendancedate1 = driver.findElement(By.xpath(s1.getRow(12).getCell(1).getStringCellValue()));
 			attendancedate1.click();
-			Thread.sleep(3000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement month1 = driver.findElement(By.xpath(s1.getRow(13).getCell(1).getStringCellValue()));	
 			Select sel123=new Select(month1);	
 			sel123.selectByValue("5");	
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement year11 = driver.findElement(By.xpath(s1.getRow(14).getCell(1).getStringCellValue()));	
 			Select sel111=new Select(year11);	
-			Thread.sleep(3000);	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			sel111.selectByValue("2023");
 			String date1 = "1";
-			Thread.sleep(6000);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			List<WebElement> alldates1 = driver.findElements(By.xpath(s1.getRow(15).getCell(1).getStringCellValue()));
 			for (WebElement elements : alldates1)
 			{
@@ -117,7 +121,7 @@ public class Employee_Record {
 			WebElement out = driver.findElement(By.xpath(s1.getRow(16).getCell(1).getStringCellValue()));
 			out.click();
 		}
-		Thread.sleep(10000);	
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);	
 		}
 		catch (Exception e) {
 		File f11 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);	
