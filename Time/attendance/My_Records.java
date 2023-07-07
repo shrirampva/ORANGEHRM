@@ -48,9 +48,9 @@ public class My_Records {
 		Workbook wb = Workbook.getWorkbook(f);
 		Sheet s = wb.getSheet("Sheet1");			
 		Pom p =PageFactory.initElements(driver,Pom.class);
-		p.uid.sendKeys(s.getCell(1, 5).getContents());
-		p.password.sendKeys(s.getCell(1, 6).getContents());
-		p.sub.click();
+		p.getUid().sendKeys(s.getCell(1, 5).getContents());
+		p.getPassword().sendKeys(s.getCell(1, 6).getContents());
+		p.getSub().click();
 		FileInputStream f1 = new FileInputStream("D:\\ECLIPS\\ORANGE_HRM(TIME)\\testfolder\\Attendance.xls");	
 		try (HSSFWorkbook wb1 = new HSSFWorkbook(f1)) {
 			HSSFSheet s1 = wb1.getSheet("Sheet3");

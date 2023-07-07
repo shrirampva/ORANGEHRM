@@ -3,10 +3,28 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 public class Pom {
 	@FindBy(name="txtUsername") 
-	public WebElement uid;
+	private WebElement uid;
 	@FindBy(name="txtPassword")
-	public WebElement password;
+	private WebElement password;
 	@FindBy(name="Submit") 
-	public WebElement sub;
+	private WebElement sub;
+	public WebElement getUid() {
+		return uid;
+	}
+	public void setUid(WebElement uid) {
+		this.uid = uid;
+	}
+	public WebElement getPassword() {
+		return password;
+	}
+	public void setPassword(WebElement password) {
+		this.password = password;
+	}
+	public WebElement getSub() {
+		return sub;
+	}
+	public void setSub(WebElement sub) {
+		this.sub = sub;
+	}
 
 }
