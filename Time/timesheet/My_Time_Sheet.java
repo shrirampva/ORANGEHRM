@@ -3,7 +3,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -21,10 +20,11 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.Keys;
 import java.io.File;		
 import com.google.common.io.Files;
+import attendance.My_Records;
 import bussiop.Pom;
 import org.openqa.selenium.TakesScreenshot;					
 import org.openqa.selenium.OutputType;				
-public class My_Time_Sheet {
+public class My_Time_Sheet extends My_Records{
 	public static WebDriver driver;
 	public Workbook wb; 
 	public Sheet sh;

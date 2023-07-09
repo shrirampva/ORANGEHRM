@@ -2,7 +2,6 @@ package attendance;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;				
@@ -21,7 +20,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-public class Configuration {
+public class Configuration extends My_Records {
 	public static WebDriver driver;
 	public Workbook wb; 
 	public Sheet sh;

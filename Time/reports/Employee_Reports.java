@@ -22,8 +22,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.google.common.io.Files;
+import attendance.My_Records;
 import bussiop.Pom;
-public class Employee_Reports {
+public class Employee_Reports extends My_Records {
 	public static WebDriver driver;
 	public Workbook wb; 
 	public Sheet sh;

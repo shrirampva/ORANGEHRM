@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -23,7 +22,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import bussiop.Pom;
 import com.google.common.io.Files;
-public class Project_Reports {
+import attendance.My_Records;
+public class Project_Reports extends My_Records {
 	public static WebDriver driver;
 	public Workbook wb; 
 	public Sheet sh;

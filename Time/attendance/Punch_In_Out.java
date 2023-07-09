@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
@@ -22,16 +21,15 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.google.common.io.Files;
-
 import bussiop.Pom;
-public class Punch_In_Out {
-	public static WebDriver driver;
-	public Workbook wb; 
-	public Sheet sh;
+public class Punch_In_Out extends My_Records {//using extends keywords we can inherate the method  from base class too child class//
+	public static WebDriver driver;//Example of Access specifier with static variable to store the value as can reuse multiple times//
+	public static Workbook wb; 
+	public static Sheet sh;
 	@BeforeTest 	
 	public void launchApp()  {					
-		System.setProperty("webdriver.chrome.driver", "D:\\ECLIPS\\ORANGE_HRM(TIME)\\ChromeDriver\\chromedriver.exe"); 													
-		driver = new ChromeDriver();													
+		System.setProperty("webdriver.chrome.driver", "D:\\ECLIPS\\ORANGE_HRM(TIME)\\ChromeDriver\\chromedriver.exe"); 	//method over riding runtime //												
+		driver = new ChromeDriver();	// we are creating object with refferacnce varible driver of the interface web driver// 											
 		driver.get("https://adminjon-osondemand.orangehrm.com/symfony/web/index.php/auth/login");													
 		driver.manage().window().maximize();													
 	}
@@ -46,16 +44,16 @@ public class Punch_In_Out {
 		Workbook wb = Workbook.getWorkbook(f);
 		Sheet s = wb.getSheet("Sheet1");			
 		Pom p =PageFactory.initElements(driver,Pom.class);
-		p.getUid().sendKeys(s.getCell(1, 5).getContents());
+		p.getUid().sendKeys(s.getCell(1, 5).getContents());//Example of Encapsulation acchived using getter and setter by delclaring specifier as private to varibles in POM class//
 		p.getPassword().sendKeys(s.getCell(1, 6).getContents());
 		p.getSub().click();
 		FileInputStream f1 = new FileInputStream("D:\\ECLIPS\\ORANGE_HRM(TIME)\\testfolder\\Attendance.xls");	
 		try (HSSFWorkbook wb1 = new HSSFWorkbook(f1)) {
 		HSSFSheet s1 = wb1.getSheet("Sheet4");
-		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	
+		WebElement time = driver.findElement(By.xpath(s1.getRow(1).getCell(1).getStringCellValue()));	// Abstaraction is hiding back ground details i.e how locators are intalized what logic is performed only showing functionality //
 		Actions act=new Actions(driver);
 		act.moveToElement(time).perform();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//Example of Polymorphism using (methodoverloading,compiletimePolymorphism,staticPolymorphism) i.e same with name and diffrent arguments //
 		WebElement attendance = driver.findElement(By.xpath(s1.getRow(2).getCell(1).getStringCellValue()));	
 		Actions act1=new Actions(driver); 
 		act1.moveToElement(attendance).click().perform();
