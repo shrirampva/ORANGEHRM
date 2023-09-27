@@ -63,7 +63,7 @@ public class Employee_Record extends My_Records {
 			act1.moveToElement(myrecords).click().perform();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement emp = driver.findElement(By.xpath(s1.getRow(4).getCell(1).getStringCellValue()));
-			emp	.sendKeys("Stephen Robert");	
+			emp.sendKeys("Stephen Robert");	
 			emp.sendKeys(Keys.ENTER);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			WebElement attendancedate = driver.findElement(By.xpath(s1.getRow(5).getCell(1).getStringCellValue()));
